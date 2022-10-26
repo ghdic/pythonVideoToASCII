@@ -1,4 +1,4 @@
-import PIL.Image
+from PIL import Image
 import json
 
 with open('settings.json') as f:
@@ -35,6 +35,10 @@ def image_to_ascii(image):
     return ascii_image
 
 
+def numpy_to_image(array):
+    return Image.fromarray(array)
+
+
 if __name__ == '__main__':
-    img = PIL.Image.open('bonsim.jpg')
+    img = Image.open('bonsim.jpg')
     print(image_to_ascii(img))
