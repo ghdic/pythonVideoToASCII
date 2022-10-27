@@ -1,9 +1,11 @@
 from PIL import Image
 import json
+import random
 
 with open('settings.json') as f:
     data = json.load(f)
-    ASCCI_CHARS = data['ASCII_CHARS']  # 그릴때 사용한 아스키코드
+    ASCII_CHARS = data['ASCII_CHARS']  # 그릴때 사용한 아스키코드
+    random.shuffle(ASCII_CHARS)
     OUTPUT_WIDTH = data['OUTPUT_WIDTH']  # 출력 높이
     DETAIL_PRIORITY = data['DETAIL_PRIORITY']  # 낮을수록 디테일하게 출력
 
@@ -24,7 +26,7 @@ def grayify(image):
 def pixels_to_ascii(image, detail_priority):
     pixels = image.getdata()
 
-    characters = "".join([ASCCI_CHARS[(pixel // detail_priority) % len(ASCCI_CHARS)] for pixel in pixels])
+    characters = "".join([ASCII_CHARS[(pixel // detail_priority) % len(ASCII_CHARS)] for pixel in pixels])
     return characters
 
 

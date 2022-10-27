@@ -2,7 +2,9 @@
 convert video frame to ascii from youtube videos
 
 ## result video
+[tutorial video list url](https://www.youtube.com/watch?v=rN8G7_xwkeU&list=PLTpciTqyNUg5Js5K5ZPqN4P-Seep67Ogh)
 
+[![YOUTUBE IMAGE](https://img.youtube.com/vi/L5y1P9ICC2w/0.jpg)](https://www.youtube.com/watch?v=L5y1P9ICC2wL5y1P9ICC2w)
 
 ## environment
 

@@ -11,10 +11,10 @@ with open('settings.json') as f:
     FRAME = data['FRAME']
 
 
-youtube_url = input('Input Youtube Video URL(Recommand 1minutes or less) > ')
+youtube_url = input('Input Youtube Video URL(Recommend 1minutes or less) > ')
 
 try:
-    title = download_youtube_video('https://www.youtube.com/watch?v=Rcq-ywfCWHs')
+    title = download_youtube_video(youtube_url)
 
     print("Extracting Frame...")
     frames = extract_video_frame(f'{title}.mp4')

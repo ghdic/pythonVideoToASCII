@@ -22,7 +22,7 @@ def download_youtube_video(url):
 
     print('======= Sound Download Start ========')
     sound_filter = yt.streams.filter(mime_type="audio/mp4", abr="128kbps")
-    sound_filter.first().download(filename=f'./{title}.m4a')
+    sound_filter.first().download(filename=f'{title}.m4a')
 
     return title
 
